@@ -1,0 +1,340 @@
+[
+  {
+    "id": "uem",
+    "name": "University of Engineering & Management (UEM)",
+    "shortName": "UEM Kolkata",
+    "code": "UEMK",
+    "state": "West Bengal",
+    "city": "Kolkata",
+    "location": "New Town Action Area III, Kolkata, West Bengal",
+    "type": "Private University",
+    "established": 2014,
+    "accreditation": "NAAC Grade 'A' | NBA Accredited",
+    "nirfRank": "Top 100 in Private Universities",
+    "status": "active",
+    "icon": "🏫",
+    "route": "/uem-home",
+    "departments": [
+      "Computer Science & Engineering",
+      "Electrical Engineering",
+      "Mechanical Engineering",
+      "Electronics & Communication Engineering",
+      "Information Technology"
+    ],
+    "semesters": [
+      "1st Semester",
+      "2nd Semester",
+      "3rd Semester",
+      "4th Semester",
+      "5th Semester",
+      "6th Semester",
+      "7th Semester",
+      "8th Semester"
+    ],
+    "degrees": ["B.Tech", "M.Tech", "BCA", "MCA"],
+    "description": "Institute of Engineering & Management (IEM) / UEM Group is an education-focused institution with high emphasis on engineering, technology, teaching, and industry-aligned research.",
+    "campus": "New Town Campus, Kolkata",
+    "website": "https://uem.edu.in",
+    "stats": {
+      "students": "9,500+",
+      "faculty": "380+",
+      "courses": "60+",
+      "placementRate": "92%"
+    }
+  },
+  {
+    "id": "iit-kharagpur",
+    "name": "Indian Institute of Technology Kharagpur",
+    "shortName": "IIT KGP",
+    "code": "IITKGP",
+    "state": "West Bengal",
+    "city": "Kharagpur",
+    "location": "Kharagpur, Paschim Medinipur, West Bengal",
+    "type": "Institute of National Importance",
+    "established": 1951,
+    "accreditation": "Institute of Eminence | NAAC A++",
+    "nirfRank": "NIRF Rank #6 (Engineering)",
+    "status": "active",
+    "icon": "🏛️",
+    "route": null,
+    "departments": [
+      "Computer Science & Engineering",
+      "Electrical Engineering",
+      "Mechanical Engineering",
+      "Aerospace Engineering",
+      "Chemical Engineering"
+    ],
+    "semesters": [
+      "1st Semester",
+      "2nd Semester",
+      "3rd Semester",
+      "4th Semester",
+      "5th Semester",
+      "6th Semester",
+      "7th Semester",
+      "8th Semester"
+    ],
+    "degrees": ["B.Tech", "M.Tech", "Dual Degree", "Ph.D."],
+    "description": "Established as the first of the IITs, IIT Kharagpur is globally recognized for pioneering engineering education, interdisciplinary research, and academic excellence in India.",
+    "campus": "Main Campus, Kharagpur (2,100 Acres)",
+    "website": "https://www.iitkgp.ac.in",
+    "stats": {
+      "students": "15,000+",
+      "faculty": "750+",
+      "courses": "180+",
+      "placementRate": "96%"
+    }
+  },
+  {
+    "id": "jadavpur-university",
+    "name": "Jadavpur University",
+    "shortName": "JU Kolkata",
+    "code": "JUK",
+    "state": "West Bengal",
+    "city": "Kolkata",
+    "location": "188, Raja S.C. Mallick Rd, Jadavpur, Kolkata",
+    "type": "State University",
+    "established": 1955,
+    "accreditation": "NAAC Grade 'A++' (CGPA 3.68)",
+    "nirfRank": "NIRF Rank #10 (Overall)",
+    "status": "active",
+    "icon": "🎓",
+    "route": null,
+    "departments": [
+      "Computer Science & Engineering",
+      "Electrical Engineering",
+      "Mechanical Engineering",
+      "Electronics & Telecommunication",
+      "Power Engineering"
+    ],
+    "semesters": [
+      "1st Semester",
+      "2nd Semester",
+      "3rd Semester",
+      "4th Semester",
+      "5th Semester",
+      "6th Semester",
+      "7th Semester",
+      "8th Semester"
+    ],
+    "degrees": ["B.Tech", "M.Tech", "B.Sc", "M.Sc"],
+    "description": "Jadavpur University is an internationally acclaimed premier unitary state university in Kolkata known for top-tier research output, affordable public education, and technical brilliance.",
+    "campus": "Jadavpur Main & Salt Lake Campuses",
+    "website": "http://www.jaduniv.edu.in",
+    "stats": {
+      "students": "12,000+",
+      "faculty": "600+",
+      "courses": "120+",
+      "placementRate": "94%"
+    }
+  },
+  {
+    "id": "iit-bombay",
+    "name": "Indian Institute of Technology Bombay",
+    "shortName": "IIT Bombay",
+    "code": "IITB",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "location": "Powai, Mumbai, Maharashtra",
+    "type": "Institute of National Importance",
+    "established": 1958,
+    "accreditation": "Institute of Eminence | NAAC A++",
+    "nirfRank": "NIRF Rank #3 (Engineering)",
+    "status": "coming-soon",
+    "icon": "⚡",
+    "route": null,
+    "departments": [
+      "Computer Science & Engineering",
+      "Electrical Engineering",
+      "Mechanical Engineering",
+      "Civil Engineering",
+      "Metallurgical Engineering"
+    ],
+    "semesters": [
+      "1st Semester",
+      "2nd Semester",
+      "3rd Semester",
+      "4th Semester",
+      "5th Semester",
+      "6th Semester",
+      "7th Semester",
+      "8th Semester"
+    ],
+    "degrees": ["B.Tech", "M.Tech", "Dual Degree"],
+    "description": "Recognized worldwide as a leader in technical education and research, IIT Bombay attracts the highest-ranking JEE Advanced candidates across the nation.",
+    "campus": "Powai Campus, Mumbai (550 Acres)",
+    "website": "https://www.iitb.ac.in",
+    "stats": {
+      "students": "13,000+",
+      "faculty": "700+",
+      "courses": "160+",
+      "placementRate": "97%"
+    }
+  },
+  {
+    "id": "delhi-university",
+    "name": "University of Delhi",
+    "shortName": "DU",
+    "code": "DU",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "location": "Benito Juarez Marg, South Moti Bagh, New Delhi",
+    "type": "Central University",
+    "established": 1922,
+    "accreditation": "NAAC Grade 'A++' | Institute of Eminence",
+    "nirfRank": "NIRF Rank #11 (Overall)",
+    "status": "coming-soon",
+    "icon": "📚",
+    "route": null,
+    "departments": [
+      "Computer Science",
+      "Electronics",
+      "Information Technology",
+      "Mathematical Sciences",
+      "Physical Sciences"
+    ],
+    "semesters": [
+      "1st Semester",
+      "2nd Semester",
+      "3rd Semester",
+      "4th Semester",
+      "5th Semester",
+      "6th Semester"
+    ],
+    "degrees": ["B.Tech", "B.Sc (Hons)", "M.Sc", "MCA"],
+    "description": "The University of Delhi is a premier collegiate central university in India's capital with over 90 affiliated colleges offering diverse undergraduate and postgraduate programs.",
+    "campus": "North & South Campuses, Delhi",
+    "website": "http://www.du.ac.in",
+    "stats": {
+      "students": "300,000+",
+      "faculty": "3,500+",
+      "courses": "500+",
+      "placementRate": "88%"
+    }
+  },
+  {
+    "id": "bits-pilani",
+    "name": "Birla Institute of Technology and Science, Pilani",
+    "shortName": "BITS Pilani",
+    "code": "BITS",
+    "state": "Rajasthan",
+    "city": "Pilani",
+    "location": "Vidya Vihar, Pilani, Rajasthan",
+    "type": "Deemed University",
+    "established": 1964,
+    "accreditation": "Institute of Eminence | NAAC Grade 'A'",
+    "nirfRank": "NIRF Rank #25 (Engineering)",
+    "status": "coming-soon",
+    "icon": "🔬",
+    "route": null,
+    "departments": [
+      "Computer Science",
+      "Electrical & Electronics",
+      "Mechanical Engineering",
+      "Chemical Engineering",
+      "Economics & Finance"
+    ],
+    "semesters": [
+      "1st Semester",
+      "2nd Semester",
+      "3rd Semester",
+      "4th Semester",
+      "5th Semester",
+      "6th Semester",
+      "7th Semester",
+      "8th Semester"
+    ],
+    "degrees": ["B.E. (Hons)", "M.E.", "M.Sc."],
+    "description": "BITS Pilani is one of India's most prestigious private institutions for higher education, pioneering modern engineering curricula and the Practice School internship model.",
+    "campus": "Pilani, Goa & Hyderabad Campuses",
+    "website": "https://www.bits-pilani.ac.in",
+    "stats": {
+      "students": "16,000+",
+      "faculty": "850+",
+      "courses": "140+",
+      "placementRate": "95%"
+    }
+  },
+  {
+    "id": "anna-university",
+    "name": "Anna University",
+    "shortName": "Anna Univ",
+    "code": "AU",
+    "state": "Tamil Nadu",
+    "city": "Chennai",
+    "location": "Sardar Patel Road, Guindy, Chennai, Tamil Nadu",
+    "type": "State University",
+    "established": 1978,
+    "accreditation": "NAAC Grade 'A++' (CGPA 3.71)",
+    "nirfRank": "NIRF Rank #13 (Engineering)",
+    "status": "coming-soon",
+    "icon": "🏛️",
+    "route": null,
+    "departments": [
+      "Computer Science & Engineering",
+      "Information Technology",
+      "Electrical & Electronics",
+      "Mechanical Engineering",
+      "Civil Engineering"
+    ],
+    "semesters": [
+      "1st Semester",
+      "2nd Semester",
+      "3rd Semester",
+      "4th Semester",
+      "5th Semester",
+      "6th Semester",
+      "7th Semester",
+      "8th Semester"
+    ],
+    "degrees": ["B.E.", "B.Tech", "M.E.", "M.Tech"],
+    "description": "Anna University is a premier public technical university in Chennai, offering higher education in Engineering, Technology, Architecture and Applied Sciences.",
+    "campus": "Guindy Campus, Chennai",
+    "website": "https://www.annauniv.edu",
+    "stats": {
+      "students": "18,000+",
+      "faculty": "900+",
+      "courses": "150+",
+      "placementRate": "91%"
+    }
+  },
+  {
+    "id": "iisc-bangalore",
+    "name": "Indian Institute of Science",
+    "shortName": "IISc Bengaluru",
+    "code": "IISC",
+    "state": "Karnataka",
+    "city": "Bengaluru",
+    "location": "CV Raman Rd, Bengaluru, Karnataka",
+    "type": "Deemed University",
+    "established": 1909,
+    "accreditation": "Institute of Eminence | NIRF Rank #1",
+    "nirfRank": "NIRF Rank #1 (University & Research)",
+    "status": "coming-soon",
+    "icon": "🧬",
+    "route": null,
+    "departments": [
+      "Computer Science & Automation",
+      "Electrical Communication Engineering",
+      "Electronic Systems Engineering",
+      "Mechanical Engineering",
+      "Computational and Data Sciences"
+    ],
+    "semesters": [
+      "1st Semester",
+      "2nd Semester",
+      "3rd Semester",
+      "4th Semester"
+    ],
+    "degrees": ["B.Tech (Math & Computing)", "B.Sc (Research)", "M.Tech", "Ph.D."],
+    "description": "India's highest-ranked institution for scientific research and advanced engineering, founded by Jamsetji Tata and Swami Vivekananda in 1909.",
+    "campus": "Bengaluru Campus (440 Acres)",
+    "website": "https://iisc.ac.in",
+    "stats": {
+      "students": "4,500+",
+      "faculty": "500+",
+      "courses": "90+",
+      "placementRate": "99%"
+    }
+  }
+]

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>University Selection & Academic Gateway — University Academic Hub</title>
+  <meta name="description" content="Enter your student details and select your university to access academic services, courses, and timetables." />
+  <meta name="theme-color" content="#173B7A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="university.css" />
+  <link rel="stylesheet" href="events-roster.css" />
+  <link rel="stylesheet" href="syllabus-ui.css" />
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+
+  <!-- ═══ GLOBAL NAVIGATION ═══ -->
+  <header class="global-header scrolled" id="global-header">
+    <nav class="global-nav" aria-label="Main navigation">
+      <div class="global-nav-container">
+        <a aria-label='University Academic Hub — Home' class='global-brand' href='/'>
+          <img src="assets/global/emblem-white.png" alt="Emblem of India" class="global-logo" />
+          <span class="global-brand-text">University Academic Hub</span>
+        </a>
+        <div class="global-nav-right">
+          <ul class="global-nav-links">
+            <li><a href='/'>Home</a></li>
+            <li><a aria-current='page' class='active' href='/university'>University</a></li>
+          </ul>
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href='/'>Home</a></li>
+        <li><a aria-current='page' class='active' href='/university'>University</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="university-page">
+
+    <!-- ═══ PAGE HEADER ═══ -->
+    <section class="uni-hero">
+      <div class="uni-hero-inner">
+        <p class="global-eyebrow">University Directory &amp; Gateway</p>
+        <h1 class="uni-page-title">Select Your University</h1>
+        <p class="uni-page-subtitle">Identify yourself, choose your university, and seamlessly access courses, weekly routines, and institutional academic resources.</p>
+      </div>
+    </section>
+
+    <!-- ═══ STUDENT FORM + UNIVERSITY SELECTION ═══ -->
+    <section class="uni-gateway" id="gateway-panel">
+      <div class="uni-gateway-container">
+
+        <!-- Student Information -->
+        <div class="form-section">
+          <div class="section-title-wrap">
+            <span class="section-step-num">Step 1</span>
+            <h2 class="form-section-title">Student Information</h2>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="student-name">Student Full Name *</label>
+              <input type="text" id="student-name" class="form-input" placeholder="e.g. Aarav Sharma" autocomplete="name" required />
+              <p class="form-error" id="name-error"></p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="student-id">Student ID / Roll Number *</label>
+              <input type="text" id="student-id" class="form-input" placeholder="e.g. UEM2026CS1042 or 18700325037" autocomplete="off" required />
+              <p class="form-error" id="id-error"></p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="student-degree">Academic Degree *</label>
+              <select id="student-degree" class="form-input" required>
+                <option value="" disabled selected>Select your degree</option>
+                <option value="B.Tech">B.Tech (Bachelor of Technology)</option>
+                <option value="M.Tech">M.Tech (Master of Technology)</option>
+                <option value="Dual Degree">Dual Degree (B.Tech + M.Tech)</option>
+                <option value="BCA">BCA (Computer Applications)</option>
+              </select>
+              <p class="form-error" id="degree-error"></p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="student-domain">Engineering Department / Domain *</label>
+              <select id="student-domain" class="form-input" required>
+                <option value="" disabled selected>Select your department</option>
+                <option value="Computer Science">Computer Science &amp; Engineering</option>
+                <option value="Electrical">Electrical Engineering</option>
+                <option value="Mechanical">Mechanical Engineering</option>
+                <option value="Electronics">Electronics &amp; Communication</option>
+              </select>
+              <p class="form-error" id="domain-error"></p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="student-semester">Semester *</label>
+              <select id="student-semester" class="form-input" required>
+                <option value="" disabled selected>Select current semester</option>
+                <option value="1st Semester">1st Semester (Year 1)</option>
+                <option value="2nd Semester">2nd Semester (Year 1)</option>
+                <option value="3rd Semester">3rd Semester (Year 2)</option>
+                <option value="4th Semester">4th Semester (Year 2)</option>
+                <option value="5th Semester">5th Semester (Year 3)</option>
+                <option value="6th Semester">6th Semester (Year 3)</option>
+                <option value="7th Semester">7th Semester (Year 4)</option>
+                <option value="8th Semester">8th Semester (Year 4)</option>
+              </select>
+              <p class="form-error" id="semester-error"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- University Selection with Search & Filter -->
+        <div class="form-section">
+          <div class="section-title-wrap">
+            <span class="section-step-num">Step 2</span>
+            <div class="section-title-row">
+              <h2 class="form-section-title">Select University</h2>
+              <span class="uni-count-badge" id="uni-count-badge">Loading...</span>
+            </div>
+          </div>
+
+          <!-- Search & Filter Controls -->
+          <div class="uni-filter-bar" id="uni-filter-bar">
+            <div class="filter-search-wrap">
+              <svg class="filter-search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text" id="uni-search" class="filter-search-input" placeholder="Search by name, code, state, or city..." />
+              <button class="filter-clear-btn" id="clear-search-btn" type="button" aria-label="Clear search" style="display:none">&times;</button>
+            </div>
+
+            <div class="filter-dropdowns">
+              <select id="filter-state" class="filter-select" aria-label="Filter by state">
+                <option value="">All States</option>
+                <option value="West Bengal">West Bengal</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Karnataka">Karnataka</option>
+              </select>
+
+              <select id="filter-type" class="filter-select" aria-label="Filter by institution type">
+                <option value="">All Institution Types</option>
+                <option value="Institute of National Importance">IITs / National Importance</option>
+                <option value="State University">State Universities</option>
+                <option value="Central University">Central Universities</option>
+                <option value="Private University">Private Universities</option>
+                <option value="Deemed University">Deemed Universities</option>
+              </select>
+
+              <button class="filter-reset-btn" id="reset-filters-btn" type="button" title="Reset all filters">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+                Reset
+              </button>
+            </div>
+          </div>
+
+          <!-- Dynamic Cards Container -->
+          <div class="uni-cards" id="uni-cards" role="radiogroup" aria-label="Select university">
+            <!-- Skeleton Cards rendered initially -->
+            <div class="uni-card skeleton-card"><div class="skeleton-icon"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
+            <div class="uni-card skeleton-card"><div class="skeleton-icon"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
+            <div class="uni-card skeleton-card"><div class="skeleton-icon"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
+          </div>
+
+          <!-- Empty State -->
+          <div class="uni-empty-state" id="uni-empty-state" style="display:none">
+            <span class="empty-icon">🔍</span>
+            <h3 class="empty-title">No universities found</h3>
+            <p class="empty-text">No institutions matched your filter criteria. Try searching with a different term or state.</p>
+            <button class="btn-outline btn-sm" id="empty-reset-btn" type="button">Reset Filters</button>
+          </div>
+
+          <!-- Error State -->
+          <div class="uni-error-state" id="uni-error-state" style="display:none">
+            <span class="error-icon">⚠️</span>
+            <h3 class="error-title">Unable to connect to university directory</h3>
+            <p class="error-text">We encountered an issue fetching universities from the backend service.</p>
+            <button class="btn-outline btn-sm" id="retry-fetch-btn" type="button">Retry Connection</button>
+          </div>
+
+          <p class="form-error" id="uni-error"></p>
+        </div>
+
+        <!-- Confirmation Preview -->
+        <div class="confirmation-preview" id="confirmation-preview" style="display:none">
+          <div class="confirm-header">
+            <h3 class="confirm-title">Student Profile Summary</h3>
+            <span class="confirm-badge">Ready for Access</span>
+          </div>
+          <div class="confirm-details">
+            <div class="confirm-item"><span class="confirm-label">Student Name</span><span class="confirm-value" id="confirm-name"></span></div>
+            <div class="confirm-item"><span class="confirm-label">ID / Roll No</span><span class="confirm-value" id="confirm-id">••••••</span></div>
+            <div class="confirm-item"><span class="confirm-label">Degree</span><span class="confirm-value" id="confirm-degree"></span></div>
+            <div class="confirm-item"><span class="confirm-label">Department</span><span class="confirm-value" id="confirm-domain"></span></div>
+            <div class="confirm-item"><span class="confirm-label">Semester</span><span class="confirm-value" id="confirm-semester"></span></div>
+            <div class="confirm-item"><span class="confirm-label">Selected University</span><span class="confirm-value highlight" id="confirm-uni"></span></div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="submit-action-wrap">
+          <button class="enter-btn disabled" id="enter-btn" type="button" disabled>
+            <span class="enter-btn-text">Enter University</span>
+            <svg class="enter-btn-arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            <span class="btn-spinner" id="enter-spinner" style="display:none"></span>
+          </button>
+          <p class="form-error form-global-error" id="global-error"></p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══ STUDENT ACADEMIC DASHBOARD VIEW ═══ -->
+    <section class="uni-dashboard" id="dashboard-panel" style="display:none">
+      <div class="dashboard-container">
+
+        <!-- Top Student Header Banner -->
+        <div class="dashboard-header-banner">
+          <div class="dashboard-header-left">
+            <div class="student-avatar" id="dash-avatar">👨‍🎓</div>
+            <div class="student-meta">
+              <div class="student-meta-top">
+                <h2 class="dash-student-name" id="dash-student-name">Student Name</h2>
+                <span class="dash-verified-pill">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Verified Session
+                </span>
+              </div>
+              <p class="dash-student-details">
+                <span id="dash-student-id">ID: </span> ·
+                <span id="dash-degree">B.Tech</span> ·
+                <span id="dash-domain">Computer Science</span> ·
+                <span id="dash-semester">1st Semester</span>
+              </p>
+              <p class="dash-uni-name" id="dash-uni-name">University Name</p>
+            </div>
+          </div>
+
+          <div class="dashboard-header-right">
+            <button class="btn-outline btn-sm" id="dash-switch-uni-btn" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+              Switch University / Profile
+            </button>
+            <a class="btn-secondary-link" id="dash-external-link" href="#" target="_blank" rel="noopener noreferrer" style="display:none">
+              Campus Portal ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Dashboard Navigation Tabs -->
+        <div class="dashboard-tabs" role="tablist">
+          <button class="dash-tab active" id="tab-courses-btn" role="tab" aria-selected="true" aria-controls="tab-courses">
+            <span class="dash-tab-icon">📚</span>
+            <span>Courses &amp; Syllabus</span>
+            <span class="dash-tab-badge" id="dash-course-count">0</span>
+          </button>
+          <button class="dash-tab" id="tab-timetable-btn" role="tab" aria-selected="false" aria-controls="tab-timetable">
+            <span class="dash-tab-icon">🗓️</span>
+            <span>Weekly Timetable</span>
+          </button>
+          <button class="dash-tab" id="tab-resources-btn" role="tab" aria-selected="false" aria-controls="tab-resources">
+            <span class="dash-tab-icon">🏛️</span>
+            <span>Institutional Resources</span>
+            <span class="dash-tab-badge" id="dash-resource-count">0</span>
+          </button>
+          <button class="dash-tab" id="tab-events-btn" role="tab" aria-selected="false" aria-controls="tab-events">
+            <span class="dash-tab-icon">🎪</span>
+            <span>Campus Events</span>
+            <span class="dash-tab-badge" id="dash-event-count">0</span>
+          </button>
+          <button class="dash-tab" id="tab-roster-btn" role="tab" aria-selected="false" aria-controls="tab-roster">
+            <span class="dash-tab-icon">👥</span>
+            <span>Class Roster</span>
+            <span class="dash-tab-badge" id="dash-roster-count">0</span>
+          </button>
+        </div>
+
+        <!-- Dashboard Content Areas -->
+        <div class="dashboard-content">
+
+          <!-- Loading State -->
+          <div class="dashboard-loading" id="dash-loading" style="display:none">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Loading university academic data...</p>
+          </div>
+
+          <!-- Error State -->
+          <div class="dashboard-error" id="dash-error" style="display:none">
+            <span class="error-icon">⚠️</span>
+            <h3 class="error-title">Unable to load academic data</h3>
+            <p class="error-text" id="dash-error-msg">Failed to retrieve course data from the server.</p>
+            <button class="btn-outline btn-sm" id="dash-retry-btn" type="button">Retry</button>
+          </div>
+
+          <!-- ── TAB 1: COURSES & SYLLABUS ── -->
+          <div class="dash-pane active" id="tab-courses" role="tabpanel">
+            <div class="pane-header">
+              <div>
+                <h3 class="pane-title">Enrolled Courses &amp; Modules</h3>
+                <p class="pane-subtitle">Curriculum and syllabus breakdown for your current department and semester.</p>
+              </div>
+              <button class="btn-outline btn-sm" id="view-curriculum-btn" type="button" style="display:none">
+                📋 Full Curriculum &amp; Credit Scheme
+              </button>
+            </div>
+            <div class="courses-card-grid" id="dash-courses-grid"></div>
+          </div>
+
+          <!-- ── TAB 2: WEEKLY TIMETABLE ── -->
+          <div class="dash-pane" id="tab-timetable" role="tabpanel" style="display:none">
+            <div class="pane-header">
+              <div>
+                <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:0.25rem;">
+                  <h3 class="pane-title" style="margin:0;">Weekly Routine</h3>
+                  <span class="roster-pill count" id="dash-timetable-batch" style="display:none;"></span>
+                </div>
+                <p class="pane-subtitle">Interactive schedule with class timings, faculty mentors, and lecture halls.</p>
+              </div>
+              <button class="btn-outline btn-sm" id="print-timetable-btn" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                Print Routine
+              </button>
+            </div>
+
+            <!-- Day Selector -->
+            <div class="timetable-day-selector" id="day-selector">
+              <button class="day-pill active" data-day="Monday">Monday</button>
+              <button class="day-pill" data-day="Tuesday">Tuesday</button>
+              <button class="day-pill" data-day="Wednesday">Wednesday</button>
+              <button class="day-pill" data-day="Thursday">Thursday</button>
+              <button class="day-pill" data-day="Friday">Friday</button>
+            </div>
+
+            <!-- Schedule List / Table -->
+            <div class="timetable-schedule-wrap">
+              <div class="schedule-cards" id="schedule-cards"></div>
+            </div>
+          </div>
+
+          <!-- ── TAB 3: INSTITUTIONAL RESOURCES ── -->
+          <div class="dash-pane" id="tab-resources" role="tabpanel" style="display:none">
+            <div class="pane-header">
+              <div>
+                <h3 class="pane-title">Academic Services &amp; Institutional Downloads</h3>
+                <p class="pane-subtitle">Official syllabi, calendars, mentorship directories, and digital libraries.</p>
+              </div>
+            </div>
+            <div class="resources-grid" id="dash-resources-grid"></div>
+          </div>
+
+          <!-- ── TAB 4: CAMPUS EVENTS ── -->
+          <div class="dash-pane" id="tab-events" role="tabpanel" style="display:none">
+            <div class="pane-header">
+              <div>
+                <h3 class="pane-title">Campus Events &amp; Academic Calendar</h3>
+                <p class="pane-subtitle">Techno-management fests, project expos, hackathons, and cultural fests organized chronologically.</p>
+              </div>
+              <div class="events-summary-strip" id="dash-events-summary"></div>
+            </div>
+            <div id="dash-events-mount"></div>
+          </div>
+
+          <!-- ── TAB 5: CLASS ROSTER ── -->
+          <div class="dash-pane" id="tab-roster" role="tabpanel" style="display:none">
+            <div class="pane-header">
+              <div>
+                <h3 class="pane-title">Class Roster &amp; Student Directory</h3>
+                <p class="pane-subtitle">Official registered classmates in your academic cohort and section.</p>
+              </div>
+            </div>
+
+            <div class="roster-toolbar" style="margin-top: 1.25rem;">
+              <div class="roster-search-box">
+                <svg class="roster-search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" id="dash-roster-search" class="roster-search-input" placeholder="Search classmate by name, roll no, or enrollment..." />
+              </div>
+              <div class="roster-meta-pills">
+                <span class="roster-pill count" id="dash-roster-count-pill">0 Students</span>
+                <span class="roster-pill section" id="dash-roster-sec-pill">Section B · Batch 2025–26</span>
+              </div>
+            </div>
+
+            <div class="roster-table-wrap">
+              <table class="roster-table">
+                <thead>
+                  <tr>
+                    <th scope="col" style="width: 75px;">Roll No</th>
+                    <th scope="col">Student Name</th>
+                    <th scope="col">Enrollment No</th>
+                    <th scope="col">Registration No</th>
+                    <th scope="col">Degree &amp; Branch</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody id="dash-roster-tbody">
+                  <!-- Rendered dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══ COMING SOON PANEL ═══ -->
+    <section class="uni-coming-soon" id="coming-soon-panel" style="display:none">
+      <div class="coming-soon-container">
+        <button class="back-link" id="back-to-gateway" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          Back to University Directory
+        </button>
+        <div class="coming-soon-content">
+          <div class="coming-soon-icon" id="coming-soon-icon">🏛️</div>
+          <h2 class="coming-soon-title" id="coming-soon-title">Portal Integration in Progress</h2>
+          <p class="coming-soon-text" id="coming-soon-text">This university portal is currently being integrated into University Academic Hub.</p>
+          <div class="coming-soon-meta" id="coming-soon-meta"></div>
+          <button class="btn-outline" id="coming-soon-back-btn" type="button">Return to University Directory</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SYLLABUS MODAL ═══ -->
+    <div class="modal-backdrop" id="syllabus-modal" style="display:none">
+      <div class="modal-dialog" style="max-width: 960px;">
+        <div class="modal-header">
+          <div>
+            <h3 class="modal-title" id="modal-title">Course Syllabus</h3>
+            <p class="modal-subtitle" id="modal-subtitle"></p>
+          </div>
+          <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="modal-body" id="modal-body" style="padding: 0;">
+          <div class="modal-image-wrap">
+            <img id="modal-img" src="" alt="Course Syllabus" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="global-footer">
+    <div class="global-footer-container">
+      <div class="global-footer-top">
+        <div class="global-footer-brand">
+          <span class="global-footer-name">University Academic Hub</span>
+          <span class="global-footer-tagline">Higher Education · Universities · Student Access</span>
+        </div>
+        <nav class="global-footer-nav" aria-label="Footer navigation">
+          <a href='/'>Home</a>
+          <a href='/university'>University Directory</a>
+        </nav>
+      </div>
+      <div class="global-footer-divider"></div>
+      <div class="global-footer-bottom">
+        <p>&copy; 2026 University Academic Hub</p>
+        <p class="global-footer-disclaimer">Indian Higher Education Academic Services Gateway.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="events-ui.js"></script>
+  <script src="syllabus-ui.js"></script>
+  <script src="university.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>

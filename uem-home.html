@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IEM Student Hub — Your Academic Command Center</title>
+  <meta name="description" content="IEM Student Hub is a centralized student platform for accessing academic information, class routines, events, syllabus and mentor details — all in one place. Built for IEM New Town Campus students." />
+  <meta name="theme-color" content="#173B7A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="events-roster.css" />
+<link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       GLOBAL NAVIGATION
+       ═══════════════════════════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <nav class="site-nav" aria-label="Main navigation">
+      <div class="nav-container">
+
+        <!-- Back to Universities -->
+        <a aria-label='Back to University Directory' class='nav-back-link' href='/university'>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          Universities
+        </a>
+
+        <!-- Brand -->
+        <a aria-label='IEM Student Hub — Home' class='nav-brand' href='/uem-home'>
+          <img src="assets/photo/iem-logo-white.png" alt="IEM Logo" class="nav-logo" width="46" height="46" />
+          <span class="nav-brand-text">IEM Student Hub</span>
+        </a>
+
+        <!-- Right Side Navigation -->
+        <div class="nav-right">
+
+          <!-- Desktop Navigation Links -->
+          <ul class="nav-links" id="nav-links">
+            <li><a aria-current='page' class='active' href='/uem-home'>Home</a></li>
+            <li><a href='/courses'>Courses</a></li>
+            <li><a href='/timetable'>Timetable</a></li>
+            <li><a href='#events'>Events</a></li>
+            <li><a href='#students-roster'>Student Roster</a></li>
+            <li><a href='/add-course'>Add Course</a></li>
+          </ul>
+
+          <!-- Search Button -->
+          <button class="nav-search-btn" aria-label="Search" id="nav-search-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href='/university'>← Universities</a></li>
+        <li><a aria-current='page' class='active' href='/uem-home'>Home</a></li>
+        <li><a href='/courses'>Courses</a></li>
+        <li><a href='/timetable'>Timetable</a></li>
+        <li><a href='#events'>Events</a></li>
+        <li><a href='#students-roster'>Student Roster</a></li>
+        <li><a href='/add-course'>Add Course</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CINEMATIC HERO
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+
+      <!-- Video Background -->
+      <div class="hero-video-wrapper">
+        <video
+          class="hero-video"
+          id="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          aria-hidden="true"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay" aria-hidden="true"></div>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="hero-content" id="hero-content">
+
+        <p class="hero-eyebrow">IEM Student Hub</p>
+
+        <h1 class="hero-headline">Academic information,<br />simplified.</h1>
+
+        <p class="hero-subtitle">A centralized platform for class routines, events, syllabus and mentor details — all in one place.</p>
+
+        <div class="hero-features" aria-label="Platform features">
+          <span>Courses</span>
+          <span class="dot" aria-hidden="true"></span>
+          <span>Timetable</span>
+          <span class="dot" aria-hidden="true"></span>
+          <span>Events</span>
+          <span class="dot" aria-hidden="true"></span>
+          <span>Mentors</span>
+        </div>
+
+        <div class="hero-ctas">
+          <a href="#welcome" class="btn-primary" id="cta-explore">
+            Explore Student Hub
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a class='btn-secondary' href='/timetable' id='cta-timetable'>
+            View Timetable
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <div class="scroll-line"></div>
+      </div>
+
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         WELCOME / PLATFORM INTRODUCTION
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="welcome-section" id="welcome">
+      <div class="welcome-container">
+
+        <!-- Text Content -->
+        <div class="welcome-text" id="welcome-text">
+          <div class="decorative-marker" aria-hidden="true">
+            <span class="blue-line"></span>
+            <span class="red-dot"></span>
+          </div>
+          <p class="eyebrow">For IEM Students</p>
+          <h2 class="section-headline">Your Academic<br />Command Center</h2>
+          <p class="section-body">A centralized student platform for accessing academic information, class routines, events, syllabus and mentor details — all in one place.</p>
+          <p class="supporting-line">Built for IEM students. Designed for everyday academic use.</p>
+        </div>
+
+        <!-- Image -->
+        <div class="welcome-image-wrapper" id="welcome-image">
+          <img
+            src="assets/photo/welcome.jpg"
+            alt="IEM New Town Campus — a modern academic building with lush green surroundings"
+            loading="lazy"
+            decoding="async"
+            width="620"
+            height="414"
+          />
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         ABOUT IEM–UEM GROUP
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="about-section" id="about">
+      <div class="about-container">
+
+        <!-- Image -->
+        <div class="about-image-wrapper" id="about-image">
+          <img
+            src="assets/photo/about-iem.jpg"
+            alt="IEM students and faculty members gathered in an academic event"
+            loading="lazy"
+            decoding="async"
+            width="620"
+            height="414"
+          />
+        </div>
+
+        <!-- Text Content -->
+        <div class="about-text" id="about-text">
+          <p class="eyebrow">About IEM–UEM Group</p>
+          <h2 class="section-headline">A Strong Academic<br />Foundation</h2>
+          <p class="section-body">Institute of Engineering &amp; Management (IEM), under the IEM–UEM Group, is an education-focused institution with emphasis on engineering, management, technology, teaching and research.</p>
+          <p class="section-body">IEM Student Hub is designed as a focused academic interface that brings essential student information into one accessible experience.</p>
+          <span class="campus-label">
+            IEM New Town Campus
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CAMPUS EVENTS & COMPETITIONS
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="events-section" id="events">
+      <div class="events-container">
+
+        <div class="events-header-row">
+          <div class="events-header-text">
+            <div class="decorative-marker" aria-hidden="true">
+              <span class="blue-line"></span>
+              <span class="red-dot"></span>
+            </div>
+            <p class="eyebrow">Campus Life &amp; Innovation</p>
+            <h2 class="section-headline">Campus Events &amp;<br />Academic Calendar</h2>
+            <p class="section-body">Explore upcoming fests, 24-hour hackathons, IEEE symposia, and alumni mentorship conclaves organized chronologically by month.</p>
+          </div>
+          <div class="events-summary-strip" id="uem-events-summary"></div>
+        </div>
+
+        <!-- Shared Organized Events Toolbar, Month Timeline & Grid Mount -->
+        <div id="uem-events-mount"></div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         STUDENT DIRECTORY / ROSTER
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="roster-section" id="students-roster">
+      <div class="roster-container">
+
+        <div class="roster-header">
+          <div class="decorative-marker" aria-hidden="true">
+            <span class="blue-line"></span>
+            <span class="red-dot"></span>
+          </div>
+          <p class="eyebrow">Official Class Directory</p>
+          <h2 class="section-headline">B.Tech CSE (IoT)<br />Student Roster</h2>
+          <p class="section-body">Enrolled batch roster for Department of Computer Science &amp; Engineering (IoT) — Batch 2025–2026, Section B (Roll No 1 to 60).</p>
+        </div>
+
+        <!-- Search & Meta Bar -->
+        <div class="roster-toolbar">
+          <div class="roster-search-box">
+            <svg class="roster-search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="roster-search" class="roster-search-input" placeholder="Search by name, roll number, enrollment or registration ID..." aria-label="Search student roster" />
+          </div>
+          <div class="roster-meta-pills">
+            <span class="roster-pill count" id="roster-count-pill">60 Registered Students</span>
+            <span class="roster-pill section">Section B · Batch 2025–26</span>
+          </div>
+        </div>
+
+        <!-- Roster Table Wrap -->
+        <div class="roster-table-wrap">
+          <table class="roster-table" id="roster-table">
+            <thead>
+              <tr>
+                <th scope="col" style="width: 75px;">Roll No</th>
+                <th scope="col">Student Name</th>
+                <th scope="col">Enrollment No</th>
+                <th scope="col">Registration No</th>
+                <th scope="col">Degree &amp; Branch</th>
+                <th scope="col">Status</th>
+                <th scope="col" style="text-align: right;">Portal Access</th>
+              </tr>
+            </thead>
+            <tbody id="roster-tbody">
+              <!-- Populated dynamically by app.js from /api/universities/uem/students -->
+              <tr>
+                <td colspan="7" style="text-align: center; padding: 2.5rem; color: var(--text-secondary);">
+                  Loading student roster...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════ -->
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-brand-name">IEM Student Hub</span>
+          <span class="footer-campus">IEM New Town Campus</span>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href='/courses'>Courses</a>
+          <a href='/timetable'>Timetable</a>
+          <a href="#events">Events</a>
+          <a href="#students-roster">Student Roster</a>
+        </nav>
+      </div>
+
+      <div class="footer-divider" aria-hidden="true"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 IEM Student Hub</p>
+        <p class="footer-tagline">Academic information platform for IEM students.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="events-ui.js"></script>
+  <script src="app.js"></script>
+<script src="chatbot.js"></script>
+</body>
+</html>
+

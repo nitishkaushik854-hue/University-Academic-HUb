@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>University Academic Hub — Indian Higher Education</title>
+  <meta name="description" content="A unified digital gateway connecting students with university-specific academic information and services." />
+  <meta name="theme-color" content="#173B7A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="global.css" />
+<link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+
+  <!-- ═══ GLOBAL NAVIGATION ═══ -->
+  <header class="global-header" id="global-header">
+    <nav class="global-nav" aria-label="Main navigation">
+      <div class="global-nav-container">
+        <a aria-label='University Academic Hub — Home' class='global-brand' href='/'>
+          <img src="assets/global/emblem-white.png" alt="Emblem of India" class="global-logo" />
+          <span class="global-brand-text">University Academic Hub</span>
+        </a>
+        <div class="global-nav-right">
+          <ul class="global-nav-links">
+            <li><a aria-current='page' class='active' href='/'>Home</a></li>
+            <li><a href='/university'>University</a></li>
+          </ul>
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a aria-current='page' class='active' href='/'>Home</a></li>
+        <li><a href='/university'>University</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══ CINEMATIC HERO ═══ -->
+    <section class="global-hero" id="global-hero">
+      <div class="global-hero-video-wrapper">
+        <video class="global-hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" id="hero-video">
+          <source src="ministry-hero-video.mp4" type="video/mp4" />
+        </video>
+        <div class="global-hero-overlay"></div>
+        <img src="assets/global/university-image-01.png" alt="" class="global-hero-fallback" aria-hidden="true" />
+      </div>
+      <div class="global-hero-content">
+        <p class="global-hero-eyebrow">Indian Higher Education</p>
+        <h1 class="global-hero-title">Connecting Students<br/>with Universities</h1>
+        <p class="global-hero-subtitle">Explore university-specific academic information, resources and student services through one unified platform.</p>
+        <div class="global-hero-ctas">
+          <a class='btn-primary-global' href='/university'>
+            Explore Universities
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#platform-intro" class="btn-secondary-global">Discover the Platform</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PLATFORM INTRODUCTION ═══ -->
+    <section class="platform-intro" id="platform-intro">
+      <div class="platform-intro-inner">
+        <div class="platform-intro-text">
+          <p class="global-eyebrow">The Platform</p>
+          <h2 class="section-title-global">One Platform.<br/>Multiple Universities.</h2>
+          <p class="section-body-global">A unified digital gateway designed to help students access university-specific academic information and services through one structured platform.</p>
+          <p class="section-body-global">Students identify themselves, select their university, and access the complete academic experience — courses, timetables, and institutional resources — all in one place.</p>
+        </div>
+        <div class="platform-intro-image">
+          <img src="assets/global/university-image-01.png" alt="Indian higher education and student engagement" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ HIGHER EDUCATION INFORMATION ═══ -->
+    <section class="education-info">
+      <div class="education-info-inner">
+        <div class="education-info-image">
+          <img src="assets/global/university-image-02.png" alt="Higher education governance and policy" loading="lazy" />
+        </div>
+        <div class="education-info-text">
+          <p class="global-eyebrow">Higher Education &amp; Innovation</p>
+          <h2 class="section-title-global">Strengthening India's Academic Ecosystem</h2>
+          <p class="section-body-global">India's higher education ecosystem emphasizes quality, access, equity, research, innovation and stronger industry-academic links as part of the National Education Policy 2020 framework.</p>
+          <div class="info-cards">
+            <div class="info-card">
+              <span class="info-card-icon">📚</span>
+              <h3 class="info-card-title">Quality Education</h3>
+              <p class="info-card-text">Improving standards and learning outcomes across institutions</p>
+            </div>
+            <div class="info-card">
+              <span class="info-card-icon">🔬</span>
+              <h3 class="info-card-title">Research &amp; Innovation</h3>
+              <p class="info-card-text">Encouraging academic research and industry collaboration</p>
+            </div>
+            <div class="info-card">
+              <span class="info-card-icon">🎓</span>
+              <h3 class="info-card-title">Inclusive Access</h3>
+              <p class="info-card-text">Equitable access to higher education for every student</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ UNIVERSITY DISCOVERY CTA ═══ -->
+    <section class="university-cta-section">
+      <div class="university-cta-inner">
+        <p class="global-eyebrow">University Directory</p>
+        <h2 class="section-title-global">Find Your University</h2>
+        <p class="section-body-global cta-body">Access your university's academic environment through one unified student gateway. Enter your student details and begin your academic journey.</p>
+        <a class='btn-primary-global btn-large' href='/university'>
+          Explore Universities
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ GLOBAL FOOTER ═══ -->
+  <footer class="global-footer">
+    <div class="global-footer-container">
+      <div class="global-footer-top">
+        <div class="global-footer-brand">
+          <span class="global-footer-name">University Academic Hub</span>
+          <span class="global-footer-tagline">Higher Education · Universities · Student Access</span>
+        </div>
+        <nav class="global-footer-nav" aria-label="Footer navigation">
+          <a href='/'>Home</a>
+          <a href='/university'>University Directory</a>
+        </nav>
+      </div>
+      <div class="global-footer-divider"></div>
+      <div class="global-footer-bottom">
+        <p>&copy; 2026 University Academic Hub</p>
+        <p class="global-footer-disclaimer">This is a conceptual student platform prototype.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="global.js"></script>
+<script src="chatbot.js"></script>
+</body>
+</html>
+
